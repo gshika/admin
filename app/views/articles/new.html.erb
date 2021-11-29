@@ -1,0 +1,50 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+ .col
+ {
+     margin-left:70px;
+     margin-top:20vh;
+ }
+</style>
+</head>
+
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-10">
+<div class="row-fluid">
+  <div class="span4 well">
+ <%= form_with model: @article do |form| %>
+ <h2 class="text-center">New Article</h2>
+
+    <div class="control-group">
+      <%= form.label :Title, :class => "control-label" %><br>
+        <%= form.text_field :Title,  :class => "form-control form-control-lg"%>
+        <% @article.errors.full_messages_for(:Title).each do|message| %>
+        <div>
+          <%= message %>
+        </div>
+        <% end %>
+    </div><br>
+    <div class="control-group">
+        <%= form.label :Description, :class => "control-label"  %><br>
+        <%= form.text_area :Description, :class => "form-control form-control-lg" %>
+         <% @article.errors.full_messages_for(:Description).each do|message| %>
+        <div>
+          <%= message %>
+        </div>
+       <% end %>
+    </div>
+    <br>
+  <div class="form-actions">
+    <%= form.submit class: 'btn btn-success' %>
+ <% end %>
+ <div>
+</div>
+</div>
+</div>

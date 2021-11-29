@@ -1,0 +1,2 @@
+module ArticleviewsHelper
+end

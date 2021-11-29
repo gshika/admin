@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   def index
   end
-  def index2
+  def dashboardtwo
+  end
+  def dashboardthree
   end
 end

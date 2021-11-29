@@ -7,7 +7,6 @@
 
 /* global moment:false, Chart:false, Sparkline:false */
 
-console.log("sjh")
 
 $(function () {
     'use strict'
